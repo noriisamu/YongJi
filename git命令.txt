@@ -48,6 +48,9 @@
 	git checkout -b tony_backup   //创建分支用于备份
 	git checkout tony_branch     //再次回到自己分支
 	git reset --hard 0bbbbbb    //回到自己分支前端
+
+
+432789579347589347985
 	
 	
 
