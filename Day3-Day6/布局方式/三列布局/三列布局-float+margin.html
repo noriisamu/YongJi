@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
+                margin: 0;
+                padding: 0;
+            }
+            .parent{
+                min-width: 310px; /*100+10+200,防止宽度不够,子元素换行*/
+            }
+            .left {
+                width: 100px;
+                height: 500px;
+                margin-right: 10px;  /*.left和.center间隔*/
+                float: left;
+                background-color: purple;
+             }       
+            .center{
+                width: 200px;
+                height: 500px;
+                float: left;
+                background-color: orange;
+            }
+            .right {
+                height: 500px;
+                margin-left: 320px;  /*等于.left和.center的宽度之和加上间隔,多出来的就是.right和.center的间隔*/
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="left">左边列定宽</div>
+            <div class="center">中间列定宽</div>
+            <div class="right">右边列自适应</div>
+        </div>
+    </body>
+</html>
