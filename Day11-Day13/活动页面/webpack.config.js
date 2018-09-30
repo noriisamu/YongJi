@@ -16,7 +16,7 @@ module.exports = {
 	// 出口文件
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: './js/bundle.js',
+		filename: 'bundle.js',
 	},
 	// 模块
 	module:{
@@ -25,26 +25,19 @@ module.exports = {
 			  test:/\.css$/,
 			  //注意：这里还需要更改一下
 			  use:ExtractTextPlugin.extract({
+				publicPath: '../',
 				fallback: "style-loader",
-				use: "css-loader"
+				use: "css-loader",
 			  })
 			},
-			{ test: /.(jpg|png|gif|svg)$/, 
-				
-				//BASE64编码解决html和css图片路径不一致问题
-				//limit参数，代表如果小于大约limit值则会自动帮你压缩成base64编码的图片,否则拷贝文件到生产目录
-				//name后面是打包后的路径；
-				loader: "url-loader?limit=819200&name=src/assets/images/[hash:8].[name].[ext]"
-
-				// use:[{
-				// 	loader: "file-loader",
-				// 	options: {
-				// 		name: '[name].[ext]',
-				// 		outputPath: './images',         //图片输出目录
-				// 		publicPath: 'images'         //图片发布目录
-				// 	}
-				// }]
-			},
+			{ test: /.(jpg|png|gif|svg)$/,
+				loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    name: 'src/assets/images/[name].[hash:7].[ext]',
+                    // publicPath:"/"
+                }
+		 	},
 			{ test: /\.html$/,loader: 'html-withimg-loader'}
 		  ]
 	},
@@ -55,7 +48,7 @@ module.exports = {
             template:'./index.html'  
 		}),
 		    //这里会按照output的路径打包到css文件夹下面对应的css的名字
-			new ExtractTextPlugin('./css/main.css')
+				new ExtractTextPlugin('css/[name].[hash:8].css')
 	],
 	resolve: {
 		 alias: { // 模块别名
