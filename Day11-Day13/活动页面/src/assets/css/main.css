@@ -1,0 +1,478 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  *:before, *:after {
+      box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+  html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0 none;
+    font-size: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    
+    /* 在X5新内核Blink中，在排版页面的时候，会主动对字体进行放大，会检测页面中的主字体，当某一块字体在我们的判定规则中，认为字号较小，并且是页面中的主要字体，就会采取主动放大的操作。然而这不是我们想要的，可以采取给最大高度解决 */
+    max-height: 8802.8169vh;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+  }
+  
+  em, strong {
+    font-style: normal;
+  }
+  
+  ul, ol, li {
+    list-style: none;
+  }
+   a {
+        text-decoration: none;
+      }
+  img {
+      width: 100%;
+      height: 100%;
+  }
+  button {
+    margin: 0;
+    padding: 0;
+    border: 1px solid transparent;  
+    outline: none;   
+  }
+#loading-page {
+    height: 177.5vw;
+
+}
+.index-page {
+    height: 177.5vw;
+    background: url(../images/index/index-bg.png) no-repeat;
+    background-size: 100% 100%;
+    display: none;
+    overflow: hidden;
+}
+.index-top-div {
+    position: relative;
+    height: 78.8vw;
+}
+.logo {
+    position: absolute;
+    width: 24.7vw;
+    height: 5.6vw;
+    margin: 5.2vw 0 0 3.6vw;
+    z-index: 9999;
+}
+.index-title {
+    position: absolute;
+    width: 95.2vw;
+    height: 70.5vw;
+    left: 50%;
+    margin-left: -47.6vw;
+    margin-top: 7.8vw;  
+    z-index: 9999;
+    animation-delay: 1s;
+}
+.clouds {
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+}
+.cloud-right {
+    position: absolute;
+    width: 15.3vw;
+    height: 4.8vw;
+    right: 0;
+    margin: 10.3vw 3.9vw 0 0;
+    animation:cloud-move-right; 
+    animation-delay: .5s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* Safari and Chrome */
+    -webkit-animation:cloud-move-right;
+    -webkit-animation-delay: .5s;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+.cloud-left {
+    position: absolute;
+    width: 15.3vw;
+    height: 4.8vw;
+    margin: 23.6vw 0 0 3.6vw;
+    animation:cloud-move-left;
+    animation-delay: .5s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* Safari and Chrome */
+    -webkit-animation:cloud-move-left; 
+    -webkit-animation-delay: .5s;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+
+.bubbles {
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+.bubbles1 {
+    position: absolute;
+    width: 3.1vw;
+    height: 3.1vw;
+    margin: 14.5vw 0 0 47.7vw;
+    animation-iteration-count: infinite;
+    animation-delay: 2.2s;
+    /* Safari and Chrome */
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: 2.2s;
+
+}
+.bubbles2 {
+    position: absolute;
+    width: 6.4vw;
+    height: 6.4vw;
+    margin: 8.9vw 0 0 50.8vw;
+    animation-iteration-count: infinite;
+    animation-delay: 1.8s;
+    /* Safari and Chrome */
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: 1.8s;
+
+}
+.bubbles3 {
+    position: absolute;
+    width: 11.7vw;
+    height: 11.7vw;
+    margin: 0 0 0 36.6vw;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+    /* Safari and Chrome */
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: 1.5s;
+
+}
+
+.index-bottom-div {
+    position: relative;
+    height: 98.8vw;
+}
+.middle-man {
+    position: absolute;
+    width: 99.5vw;
+    height: 44.4vw;
+    margin-top: 19.8vw;
+    z-index: 9999;
+    animation:-s 0s 0.8s;
+
+}
+.hidden-div {
+    position: absolute;
+    width: 100vw;
+    height: 50.2vw;
+    overflow: hidden;
+    z-index: 9998;
+}
+.grandpa {
+    position: absolute;
+    width: 42.7vw;
+    height: 93vw;
+}
+.rider {
+    position: absolute;
+    right: 0;
+    width: 50.3vw;
+    height: 73vw;
+    animation:-s 0s 0.4s;
+}
+#index-btn {
+    position: absolute;
+    width: 64.1vw;
+    height: 18.4vw;
+    left: 50%;
+    margin-left: -32.05vw;
+    margin-top: 75vw;
+    z-index: 9998;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+    /* Safari and Chrome */
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: 1.5s;
+}
+#alert-page {
+    height: 177.5vw;
+    background: url(../images/alert/alert-bg.png);
+    background-size: 100% 100%;
+    display: none;
+}
+.alert-top-div {
+    position: relative;
+    height: 35.3vw;
+}
+.alert-title {
+    position: absolute;
+    width: 99.1vw;
+    height: 36.1vw;
+    left: 50%;
+    margin-left: -49.55vw;
+    margin-top: 3.9vw;
+
+}
+.alert-bottom-div {
+    position: relative;
+    height: 142.2vw;
+}
+.alert-logo {
+    position: absolute;
+    height: 4.5vw;
+    width: 21.6vw;
+    left: 50%;
+    margin-left: -10.8vw;
+    margin-top: 13vw;
+}
+.alert-remarks{
+    position: absolute;
+    width: 73.4vw;
+    height: 12.2vw;
+    left: 50%;
+    margin-left: -36.7vw;
+    margin-top: 22.3vw;
+}
+.line {
+    position: absolute;
+    width: 18.8vw;
+    margin-top: 2.7vw;
+    border-bottom: 1px solid #959595;
+    z-index: 10;
+}
+.circle {
+    position: absolute;
+    width: 1.6vw;
+    height: 0.88028vh;
+    margin-top: 2vw;
+    margin-left: 18vw;
+    border-radius: 1vw;
+    background: #959595;
+    z-index: 20;
+}
+.line-right {
+    right: 0;
+}
+.circle-right {
+    right: 0;
+    margin-right: 18vw;
+}
+.alert-remarks-info {
+    position: absolute;
+    width: 73.4vw;
+    height: 12.2vw;
+    left: 50%;
+    margin-left: -36.7vw;
+    text-align: center;
+}
+.alert-remarks-info p {
+    font-size: 4.1vw;
+    color: #959595;
+}
+.alert-remarks-info span {
+    color: orange;
+    font-weight: bold;
+}
+.form_div {
+    position: absolute;
+    width: 83.8vw;
+    height: 99.1vw;
+    left: 50%;
+    margin-left: -41.9vw;
+    margin-top: 34.5vw;
+
+}
+.form_items {
+    width: 83.8vw;
+    padding-top: 3.3vw;
+    clear: both;
+
+}
+.span_style {
+    width: 16.6vw;
+    height: 11.1vw;
+    font-size: 5vw;
+    text-align: justify;
+    vertical-align: middle;
+    padding-top: 2.5vw;
+    display: inline-block;
+}
+.span_style>span {
+    display: inline-block;
+    padding-left: 100%;
+}
+.registinfo_input-short {
+    width: 36.719vw;
+    height: 11.2vw;
+    border: 0.2vw solid grey;
+    font-size: 5vw;
+    vertical-align: middle;
+    margin-left: 3.4vw;
+}
+.registinfo_input {
+    width: 62.3vw;
+    height: 11.2vw;
+    border: 0.2vw solid grey;
+    font-size: 5vw;
+    vertical-align: middle;
+    margin-left: 3.4vw;
+}
+.registinfo_input-short::-webkit-input-placeholder{
+    font-size: 3.8vw;
+    padding: 3.9vw 0 3.9vw 3.6vw;
+    color: #c0c0c0;
+}
+.registinfo_input,.registinfo_input-shor::-moz-placeholder{  
+    font-size: 3.8vw;
+    padding: 3.9vw 0 3.9vw 3.6vw;
+    color: #c0c0c0;       
+}
+.registinfo_input,.registinfo_input-shor:-ms-input-placeholder{ 
+    font-size: 3.8vw;
+    padding: 3.9vw 0 3.9vw 3.6vw;
+    color: #c0c0c0; 
+}
+.registinfo_input::-webkit-input-placeholder {
+    font-size: 3.8vw;
+    padding: 3.9vw 0 3.9vw 3.6vw;
+    color: #c0c0c0;
+}
+.registinfo_input::-moz-placeholder{  
+    font-size: 3.8vw;
+    padding: 3.9vw 0 3.9vw 3.6vw;
+    color: #c0c0c0;       
+}
+.registinfo_input:-ms-input-placeholder{ 
+    font-size: 3.8vw;
+    padding: 3.9vw 0 3.9vw 3.6vw;
+    color: #c0c0c0; 
+}
+.sex_button {
+    vertical-align: middle;
+    width: 11.1vw;
+    height: 11.1vw;
+    border: 0.1vw solid rgb(173, 166, 166);
+    background: white;
+    font-size: 5vw;
+}
+.sex_button:nth-of-type(1) {
+    margin-left: 4.2vw;
+}
+
+.insurance_button {
+    width: 38.5vw;
+    height: 11.2vw;
+    margin-left: 1.7vw;
+    vertical-align: middle;
+    border-radius: 0.8vw;
+    text-align: center;
+    color: #4b4747;
+    background: #e5e5e5;
+}
+.insurance_button_info--top {
+    font-size: 4.4vw;
+}
+.insurance_button_info--bottom {
+    font-size: 3.6vw;
+}
+.insurance_button_icon-hidden {
+    position: absolute;;
+    width: 13.4vw;
+    height: 10vw;
+    overflow: hidden;
+    
+}
+.insurance_button_icon-left {
+    position: absolute;
+    width: 18.8vw;
+    height: 12.2vw;
+    background: url(../images/alert/plane.png);
+    background-size: 100% 100%;
+    margin: -2.2vw 0 0 -6.2vw;
+}
+.insurance_button_icon-right {
+    position: absolute;
+    width: 18.8vw;
+    height: 12.2vw;
+    background: url(../images/alert/car.png);
+    background-size: 100% 100%;
+    margin: -2.2vw 0 0 -6.2vw;
+}
+input[type='checkbox']{
+    width: 3.1vw;
+    height: 3.1vw;
+    background: url("../images/alert/checkbox.png") no-repeat center;
+    -webkit-appearance:none;
+    border-radius: 0.3vw;
+    outline: none;
+    margin-left: 6.7vw;
+
+}
+input[type=checkbox]:checked{
+    background: url("../images/alert/checked.png") no-repeat center;
+ }
+.agreement {
+    display: inline-block;
+    width: 70.5vw;
+    height: 7.3vw;
+    vertical-align: middle;
+    font-size: 2.8vw;
+    color: #999999;
+ }
+.action_btn {
+    position: relative;
+    width: 60.2vw;
+    height: 17.5vw;
+    left: 50%;
+    margin-left: -30.1vw;
+    background: none;
+ }
+ .footer_info {
+    color: #bababa;
+    font-size: 2.8vw;
+    text-align: center;
+ }
+ .pendant {
+     position: absolute;
+     width: 15.6vw;
+     height: 11.6vw;
+     margin: 22.3vw 0 0 84.8vw;
+     z-index: 9999;
+ }
+ @keyframes cloud-move-left {
+     from { margin: 23.6vw 0 0 3.6vw;}
+     to {margin: 23.6vw 0 0 -8vw;}
+ }
+ @keyframes cloud-move-right {
+    from { margin: 10.3vw 3.9vw 0 0;}
+    to {margin: 10.3vw -3.9vw 0 0;}
+}
+.button--selected {
+    background: #94cee7;
+    color: white;
+    border: none;
+}
+
+.div234{
+    width: 156.25vw;
+    height: 156.25vw;
+}
+
+
+
+
+
