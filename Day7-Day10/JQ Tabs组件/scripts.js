@@ -45,4 +45,4 @@
 			return this;
 		}
 	})
-}(jQuery);
+	}(jQuery);

@@ -47,9 +47,6 @@ body {
 	display: none;
 }
 /* 选中时面板出现 */
-.tab-panel.active {
-	display: block;
-}
 .tab-panel-title {
 	margin-bottom: 10px;
 }
