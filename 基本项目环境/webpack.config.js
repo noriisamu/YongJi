@@ -17,7 +17,7 @@ module.exports = {
 	// 出口文件
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js',
+		filename: 'js/bundle.js',
 	},
 	// 模块
 	module:{
@@ -65,14 +65,20 @@ module.exports = {
                     // publicPath:"/"
                 }
 		 	},
-			{ test: /\.html$/,loader: 'html-withimg-loader'}
+			{ test: /\.html$/,loader: 'html-withimg-loader'},
+			
 		  ]
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(), //热加载插件
 		new HtmlWebpackPlugin({
-            filename:'index.html',
+            filename:'index.html', //生产的html文件名
             template:'./index.html'  
+		}),
+		//有多少个活动页面，就写多少个HtmlWebpackPlugin
+		new HtmlWebpackPlugin({
+            filename:'pages/20181011/20181011.html', //生产的html文件名
+            template:'./src/pages/20181011/20181011.html'  
 		}),
 		//这里会按照output的路径打包到css文件夹下面对应的css的名字
 		new ExtractTextPlugin('css/styles.css'),
