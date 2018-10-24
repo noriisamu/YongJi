@@ -1,0 +1,201 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background: #f3f3f3;
+}
+.lunbo-div {
+    width: 750px;
+    height: 360px;
+    background: orange;
+}
+
+.type-content-div {
+    height: 289px;
+    width: 750px;
+    background: white;
+    border-bottom: 1px solid #ebebeb;
+
+    .crosss-line-x {
+        position: absolute;
+        width: 750px;
+        height: 1px;
+        background: #ebebeb;
+        margin-top: 150px;
+    }
+    .crosss-line-y {
+        position: absolute;
+        width: 1px;
+        height: 289px;
+        background: #ebebeb;
+        margin-left: 370px;
+    }
+
+    .type-content-items-div {
+        display: inline-block;
+        position: relative;
+        width: 370px;
+        height: 149.5px;
+        .insu-type {
+            position: absolute;
+            width: 220px;
+            height: 98px;
+            left: 50%;
+            top: 50%;
+            margin-left: -110px;
+            margin-top: -49px;
+            background-size: 100%;
+        }
+        .insu-type-1 {
+            background: url(../images/travelType.png) no-repeat;
+        }
+        .insu-type-2 {
+            background: url(../images/sportsType.png) no-repeat;
+        }
+        .insu-type-3 {
+            background: url(../images/homeProfitType.png) no-repeat;
+        }
+        .insu-type-4 {
+            background: url(../images/dieaseType.png) no-repeat;
+        }
+    }
+}
+
+
+.tab-head {
+	list-style-type: none;
+    text-align: center;
+    background: white;
+    width: 750px;
+    height: 90px;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.tab-head::after {
+	clear: both;
+	content: ' ';
+	width: 0;
+	height: 0;
+	display: block;
+}
+.tab-head li {
+	float: left;
+	cursor: pointer;
+	display: inline-block;
+	height:28px;
+    width:112px;
+    margin-top: 18px;
+	margin-right: 34px;
+	text-decoration: none;
+    font-size: 28px;
+    color: #999999;
+    text-align: center;
+}
+.tab-head li:first-child {
+    margin-left: 20px;
+}
+/* 选中标签时样式的变化 */
+.tab-head li.active {
+    color: #2196F3;
+	cursor: default;
+}
+.tab-panel-wrap {
+	width: 750px;
+}
+.tab-panel-wrap .tab-panel {
+	width: 750px;;
+    display: none;
+    background: #F3F3F3;
+    overflow: hidden;
+}
+.insu-items-content {
+    width: 694px;
+	height: 412px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 40px 28px 0 28px;
+
+}
+.tab-panpel_img {
+    width: 694px;
+    height: 320px;
+    background-size: 100%;
+    
+}
+.insu-title {
+    display: inline-block;
+    margin: 30px 132px 30px 28px;
+    font-size: 32px;
+    color: #333333;
+}
+.insu-price {
+    color: #FF9800;
+    font-size: 32px;
+}
+.insu-price-after {
+    font-size: 24px;
+    color: #999999;
+    margin-left: 10px;
+
+}
+.insuImg1 {
+    background: url(../images/adultInsurance.png) no-repeat;
+}
+.insuImg2 {
+    background: url(../images/parentsInsurance.png) no-repeat;
+
+}
+/* 选中时面板出现 */
+.tab-panel.active {
+	display: block;
+}
+#tab1 {
+    width: 750px;
+	margin-top: 16px;
+}
+
+.page-bottom-nav {
+    width: 750px;
+    height: 98px;
+    background: white;
+    border-top: 1px solid #C2C2C2;
+}
+.page-bottom-nav-left {
+    display: inline-block;
+    position: relative;
+    width: 375px;
+    height: 98px;
+}
+.page-bottom-nav-right {
+    display: inline-block;
+    position: relative;
+    width: 370px;
+    height: 98px;
+}
+.store {
+    position: absolute;
+    width: 42px;
+    height: 38px;
+    background-size: 100%;
+    background: url(../images/store-unselected.png) no-repeat;
+    top: 50%;
+    left: 50%;
+    margin-left: -21px;
+    margin-top: -19px;
+}
+.userIcon {
+    position: absolute;
+    width: 42px;
+    height: 38px;
+    background-size: 100%;
+    background: url(../images/userIcon-unselected.png) no-repeat;
+    top: 50%;
+    left: 50%;
+    margin-left: -21px;
+    margin-top: -19px;
+}
+
+

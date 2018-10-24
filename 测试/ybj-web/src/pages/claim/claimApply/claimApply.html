@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>理赔申请</title>
+</head>
+<body>
+    <div class="claimApply-flow-info">
+        <h2>理赔流程说明</h2>
+        <p>1.用户在线填写理赔申请</p>
+        <p>2.保险公司受理审核，约7个工作日</p>
+        <p>3.保险公司审核通过后，支付赔偿金</p>
+    </div>
+    <form action="#">
+        <div class="claimApply-items">
+            <div class="claimApply-left">
+                <span>保险产品</span>
+            </div>
+            <div class="claimApply-right">
+                <input type="text" name="insurance-type" value="挂号医疗险" readonly>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="claimApply-items">
+            <div class="claimApply-left">
+                <span>保单</span>
+            </div>
+            <div class="claimApply-right">
+                <input type="text" name="insurance-id" value="PPI28398923889727" readonly>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="claimApply-items">
+            <div class="claimApply-left">
+                <span>出险时间</span>
+            </div>
+            <div class="claimApply-right">
+                <input type="text" name="insurance-time" value="2017-09-22" readonly>
+            </div>
+            <div class="line" style="background:none"></div>
+        </div>
+    </form>
+
+    <form action="#" method="post" class="claimApply-form" id="claimApply-form-1">
+        <div class="claimApply-items">
+            <div class="claimApply-left">
+                <span>收款人</span>
+            </div>
+            <div class="claimApply-right">
+                <input type="text" name="remittee" placeholder="张小二" required>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="claimApply-items">
+            <div class="claimApply-left">
+                <span>手机号</span>
+            </div>
+            <div class="claimApply-right">
+                <input type="text" name="phoneNumber" placeholder="15622241189" maxlength="11">
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="claimApply-items">
+            <div class="claimApply-left">
+                <span>证件号</span>
+            </div>
+            <div class="claimApply-right">
+                <input type="text" name="identify" placeholder="440508199702204624" maxlength="18">
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="claimApply-items">
+            <div class="claimApply-left">
+                <span>银行账号</span>
+            </div>
+            <div class="claimApply-right">
+                <input type="text" name="bankCount" placeholder="建议中行、工行、农行、建行储蓄卡" maxlength="19">
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="claimApply-items">
+            <div class="claimApply-left">
+                <span>开户行</span>
+            </div>
+            <div class="claimApply-right">
+                <input type="text" name="depositBank" placeholder="请填写">
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="claimApply-items">
+            <div class="claimApply-left">
+                <span>开户行所在城市</span>
+            </div>
+            <div class="claimApply-right">
+                    <input id="depositBankCity" name="depositBankCity" type="text" readonly="" placeholder="请选择>"  value="广州市"/>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="claimApply-items" style="border-bottom:1px solid #dddddd;">
+            <div class="claimApply-left">
+                <span>开户支行</span>
+            </div>
+            <div class="claimApply-right">
+                <input type="text" name="depositBranchBank" placeholder="请选择>">
+            </div>
+            <div class="line" style="background:none"></div>
+        </div>
+        <div class="claimApply-checkBox-div">
+            <p>温馨提示：请认真填写银行卡号，如果填写有误，会影响到理赔</p>
+            <div class="checkBox-content">
+                <input type="checkbox" class="claimApply-checkBox">
+                <span>我确认本人为被保险人或其监护人</span>
+            </div>
+            <p>本服务由盈百家提供，广东百家投资咨询有限公司为合法授权服</p>
+            <p>务商，如对理赔有疑问请联系：020-85656972</p>
+        </div>
+        <button class="claimApply-action-btn">提交理赔</button>
+    </form>
+
+    <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+</body>
+</html>

@@ -21,12 +21,12 @@ body {
 	float: left;
 	cursor: pointer;
 	display: inline-block;
-	height:30px;
-	width:100px;
-	margin-right: 5px;
+	height:28px;
+	width:84px;
 	text-decoration: none;
-	line-height: 30px;
 	background: white;
+	font-size: 28px;
+	margin-right: 54px;
 }
 /* 选中标签时样式的变化 */
 .tab-head li.active {

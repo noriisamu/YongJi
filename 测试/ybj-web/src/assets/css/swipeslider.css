@@ -1,0 +1,237 @@
+.swipslider {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 750px;
+  padding-top: 60%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .swipslider .sw-slides {
+    display: block;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    font-size: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    position: absolute;
+    bottom: 0; }
+  .swipslider .sw-slide {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: inline-block;
+    position: relative; }
+    .swipslider .sw-slide > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      max-height: 100%;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
+    .swipslider .sw-slide .sw-content {
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 14px; }
+
+.sw-next-prev {
+  font-family: "Courier New", Courier, monospace;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  line-height: 50px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgba(160, 160, 160, 0.53);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all .2s ease-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .sw-next-prev:hover {
+    background-color: rgba(255, 255, 255, 0.74); }
+  .sw-next-prev:active {
+    background-color: rgba(255, 255, 255, 0.5); }
+
+.sw-prev {
+  left: 2%; }
+  .sw-prev::after {
+    content: '<'; }
+
+.sw-next {
+  right: 2%; }
+  .sw-next::after {
+    content: '>'; }
+
+.sw-bullet {
+  position: absolute;
+  bottom: 2%;
+  list-style: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+  .sw-bullet li {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(160, 160, 160, 0.53);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: all .2s ease-out; }
+    .sw-bullet li:hover {
+      background-color: rgba(255, 255, 255, 0.74); }
+    .sw-bullet li.active {
+      background-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 2px rgba(160, 160, 160, 0.53); }
+    .sw-bullet li:not(:last-child) {
+      margin-right: 5px; }
+
+      /* .container{
+        margin: 0 auto;
+        max-width: 750px;
+      } */
+      
+      a:link {
+        color: #fff0d5; }
+      
+      a:hover {
+        color: #aaa3fc; }
+      
+      a:active {
+        color: #9289ff; }
+      
+      a:visited {
+        color: #fff0d5; }
+      
+      .swipslider {
+        margin: 0 auto; }
+      
+      #content_slider {
+        background-color: #f0f0f0;
+        width: 750px; }
+      
+        #content_slider .wanted {
+          padding: 25px; }
+      
+          #content_slider .wanted:after {
+            display: table;
+            content: "";
+            clear: both; }
+      
+          #content_slider .wanted img {
+            float: left;
+            position: relative;
+            height: 225px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.33);
+            margin-right: 15px; }
+      
+          #content_slider .wanted .description {
+            float: left;
+            padding: 10px;
+            display: block;
+            font-size: 16px;
+            color: #343332;
+            background: #e5e5e5;
+            height: 225px;
+            width: 349px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.58);
+            white-space: normal; }
+            #content_slider .wanted .description h1 {
+              font-size: 18px;
+              margin: 0;
+              text-align: left;
+              color: #515f6c;
+              text-shadow: none; }
+            #content_slider .wanted .description::after {
+              display: table;
+              content: "";
+              clear: both; }
+            #content_slider .wanted .description p {
+              margin-bottom: 1px;
+              margin-top: 6px;
+              font-size: 14px; }
+            #content_slider .wanted .description p.award {
+              color: #be9a02; }
+            #content_slider .wanted .description ul {
+              list-style: square;
+              padding-left: 20px;
+              font-size: 14px; }
+            #content_slider .wanted .description strong {
+              color: #515f6c; }
+      #customizability .sw-next-prev {
+        width: 120px;
+        height: 60px;
+        background-color: rgba(82, 82, 82, 0);
+        color: rgba(255, 254, 235, 0.28);
+        border-radius: 3px;
+        font-size: 25px; }
+        #customizability .sw-next-prev:hover {
+          color: #fffeeb;
+          background-color: #525252;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.57); }
+      #customizability .sw-prev {
+        left: 0%; }
+        #customizability .sw-prev::after {
+          line-height: 60px;
+          content: '< back'; }
+      #customizability .sw-next {
+        right: 0%; }
+        #customizability .sw-next::after {
+          line-height: 60px;
+          content: 'next >'; }
+      #customizability .sw-bullet {
+        top: 4%; }
+        #customizability .sw-bullet li {
+          width: 10px;
+          height: 5px;
+          background-color: rgba(255, 254, 235, 0.28);
+          border-radius: 0;
+          vertical-align: middle; }
+          #customizability .sw-bullet li.active {
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 10px solid #fffeeb;
+            background-color: transparent;
+            width: 0;
+            height: 0;
+            vertical-align: bottom; }
+          #customizability .sw-bullet li:hover {
+            height: 10px;
+            background-color: #fffeeb; }
+      .slide-number {
+        font-size: 60px;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        -webkit-transform: translate(-50%);
+                transform: translate(-50%);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.54); }
+      
+      
